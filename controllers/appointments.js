@@ -20,9 +20,15 @@ function update(req, res) {
   })
 }
 
+function deleteAppt(req, res) {
+  Appointment.findByIdAndDelete(req.params.id, function () {
+    index(req, res);
+  })
+}
+
 module.exports = {
   index,
   create,
   update,
-  // delete: deleteAppt,
+  delete: deleteAppt,
 }
