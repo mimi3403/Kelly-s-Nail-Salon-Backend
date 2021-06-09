@@ -5,7 +5,7 @@ const appointmentSchema = new Schema({
   name: String,
   phoneNumber: String,
   date: Date,
-  time: Number,
+  time: String,
 }, { timestamps: true });
 
 module.exports = mongoose.model('Appointment', appointmentSchema)

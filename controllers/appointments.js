@@ -10,6 +10,7 @@ function index(req, res) {
 function create(req, res) {
   Appointment.create(req.body, function (err, appointment) {
     res.status(201).json(appointment);
+    console.log(err)
   })
 }
 
