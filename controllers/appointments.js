@@ -2,7 +2,7 @@ const Appointment = require('../models/appointment');
 
 
 function index(req, res) {
-  Appointment.find({}, function (err, appointments) {
+  Appointment.find({ uid: req.query.uid }, function (err, appointments) {
     res.status(200).json(appointments)
   })
 }
